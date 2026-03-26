@@ -911,6 +911,126 @@ const weeks = [
     ],
     quickPrompts: ["Write an evaluation paragraph for interest rate policy", "How do I structure a 25-mark essay introduction?", "What data skills will Paper 3 test?"]
   }
+  ,{
+  id:7, week:"Week 8", type:"macro", title:"Exchange Rates",
+  focus:"Currency determination, exchange rate systems and macroeconomic impacts",
+  topics:[
+    {
+      title:"What Is an Exchange Rate?",
+      body:"The exchange rate (ER) is the price of one currency expressed in terms of another — e.g. £1 = $1.25. It is set in the foreign exchange market (forex), where currencies are bought and sold continuously by banks, firms, investors and central banks."
+    },
+    {
+      title:"Floating vs Fixed Systems",
+      body:"A floating ER is determined purely by market supply and demand (S&D) — the UK uses this. A fixed ER is pegged (officially set) by the central bank against another currency. A managed float (dirty float) is a hybrid: the ER floats but the central bank (CB) intervenes to limit volatility."
+    },
+    {
+      title:"Appreciation & Depreciation",
+      body:"Appreciation: the currency strengthens — buys more foreign currency. Depreciation: the currency weakens — buys less. Under a fixed system the equivalent terms are revaluation (official strengthening) and devaluation (official weakening). Note: these are all changes in the nominal ER."
+    },
+    {
+      title:"Current Account (CA) & Trade Effects",
+      body:"The current account (CA) records trade in goods, services, investment income and transfers. A weaker pound (depreciation) makes exports (X) cheaper abroad and imports (M) more expensive at home — improving the CA balance over time, subject to the Marshall-Lerner condition (MLC) and J-curve effect."
+    }
+  ],
+  formulas:[
+    {name:"Exchange rate (direct quote)",expr:"e.g. £1 = $1.25 (GBP/USD)",note:"How many USD one GBP buys"},
+    {name:"% change in ER",expr:"%Δ = (New rate − Old rate) / Old rate × 100",note:"Positive = appreciation; negative = depreciation"},
+    {name:"Effect on export price",expr:"Foreign price of UK export = UK price / ER",note:"Depreciation → lower foreign price → more competitive"},
+    {name:"Effect on import price",expr:"Domestic price of import = Foreign price × ER",note:"Depreciation → higher domestic price → costlier imports"},
+    {name:"Marshall-Lerner Condition (MLC)",expr:"|PED(X)| + |PED(M)| > 1",note:"If true, depreciation improves CA balance in long run"},
+    {name:"Real ER",expr:"Real ER = Nominal ER × (P_domestic / P_foreign)",note:"Adjusts for relative price levels (purchasing power)"}
+  ],
+  examples:[
+    {
+      q:"£1 = $1.40 in January. By June £1 = $1.20. Calculate the % depreciation of sterling and explain the effect on a UK car exported at £30,000.",
+      steps:[
+        {t:"% change in ER = <code>(1.20 − 1.40) / 1.40 × 100 = −14.3%</code>"},
+        {t:"Sterling (GBP) has <strong>depreciated</strong> by 14.3% against the US dollar (USD)."},
+        {t:"Old USD price of car: <code>£30,000 × 1.40 = $42,000</code>"},
+        {t:"New USD price of car: <code>£30,000 × 1.20 = $36,000</code>"},
+        {t:"The car is now $6,000 cheaper for American buyers → UK exports become more price-competitive."}
+      ],
+      ans:"14.3% depreciation. Export price falls from $42,000 to $36,000 — improves UK export competitiveness."
+    },
+    {
+      q:"UK imports oil priced at $80 per barrel. ER moves from £1=$1.60 to £1=$1.20. Calculate the change in sterling import cost and explain the inflationary impact.",
+      steps:[
+        {t:"Old sterling (GBP) cost: <code>$80 / 1.60 = £50 per barrel</code>"},
+        {t:"New GBP cost: <code>$80 / 1.20 = £66.67 per barrel</code>"},
+        {t:"Import cost rises by <code>£16.67 (+33.3%)</code> — despite the dollar (USD) price being unchanged."},
+        {t:"Higher import costs feed into producer costs → firms raise prices → imported inflation (cost-push inflation)."},
+        {t:"This is a key evaluation point: depreciation improves trade competitiveness but worsens inflation."}
+      ],
+      ans:"Import cost rises from £50 to £66.67 (+33%). Depreciation causes cost-push (imported) inflation."
+    }
+  ],
+  diagrams:[
+    {
+      title:"Supply & Demand in the Forex Market — Depreciation",
+      steps:[
+        "Draw axes: vertical = Exchange Rate (ER), e.g. $ per £; horizontal = Quantity of £ traded",
+        "Draw downward-sloping demand curve (D) for £ — foreign buyers want £ to buy UK goods/assets",
+        "Draw upward-sloping supply curve (S) of £ — UK residents supply £ to buy foreign currency",
+        "Equilibrium ER at E₁ where D and S intersect",
+        "To show depreciation: shift D LEFT (less foreign demand for £) OR shift S RIGHT (UK residents supply more £)",
+        "New equilibrium E₂: lower ER — pound buys fewer dollars → depreciation"
+      ]
+    },
+    {
+      title:"The J-Curve Effect",
+      steps:[
+        "Draw axes: vertical = Current Account (CA) balance (£); horizontal = Time",
+        "Mark the point of depreciation on the time axis",
+        "Immediately after depreciation: CA balance WORSENS (dips below the x-axis) — forms the bottom of the J",
+        "Reason for initial worsening: import contracts are fixed in foreign currency (inelastic in SR) so import bills rise in £ terms",
+        "After 12–18 months: CA begins to improve as demand for X (exports) rises and demand for M (imports) falls",
+        "Long-run: CA returns above original level IF Marshall-Lerner Condition (MLC) holds — PED(X) + PED(M) > 1",
+        "Label the curve as a J-shape with SR dip and LR recovery"
+      ]
+    }
+  ],
+  quiz:[
+    {
+      q:"Sterling (GBP) depreciates against the euro (EUR). Which of the following is most likely in the short run (SR)?",
+      opts:[
+        "UK exports become cheaper for eurozone buyers — export volumes rise immediately",
+        "The current account (CA) balance worsens before improving — the J-curve effect",
+        "Domestic inflation falls because import prices are lower",
+        "The Bank of England (BoE) must raise interest rates immediately"
+      ],
+      c:1,
+      exp:"In the short run (SR), import contracts are priced in foreign currency and slow to adjust, so the sterling (GBP) cost of imports rises before export volumes respond. This causes a temporary CA deterioration — the J-curve effect. Export volumes rise only after buyers adjust (long run, LR)."
+    },
+    {
+      q:"The Marshall-Lerner Condition (MLC) states that depreciation improves the current account (CA) if:",
+      opts:[
+        "Nominal GDP (gross domestic product) rises after the depreciation",
+        "The sum of the price elasticity of demand (PED) for exports and imports exceeds 1 in absolute value",
+        "The central bank (CB) holds interest rates constant",
+        "Inflation (CPI) stays below 2%"
+      ],
+      c:1,
+      exp:"MLC: |PED(X)| + |PED(M)| > 1. If both export and import demand are sufficiently elastic (price-sensitive) in the long run (LR), the volume effects outweigh the price effects and the CA balance improves. If PED values are low (inelastic), depreciation worsens the CA."
+    },
+    {
+      q:"A rise in UK interest rates set by the Bank of England (BoE) is most likely to cause:",
+      opts:[
+        "Depreciation of sterling (GBP) — capital flows out of the UK",
+        "Appreciation of sterling (GBP) — hot money flows into the UK seeking higher returns",
+        "A fall in aggregate demand (AD) only, with no effect on the exchange rate (ER)",
+        "An immediate improvement in the current account (CA) balance"
+      ],
+      c:1,
+      exp:"Higher UK interest rates attract hot money inflows — international investors move funds into UK assets (e.g. gilts) to earn higher returns. This increases demand for GBP (sterling) in the forex market → GBP appreciates. Appreciation then makes exports (X) more expensive and imports (M) cheaper, potentially worsening the CA balance."
+    }
+  ],
+  qps:[
+    "Explain the J-curve effect with a diagram walkthrough",
+    "What causes sterling to appreciate — list and explain each factor",
+    "Evaluate whether a depreciation of the pound is good for the UK economy"
+  ]
+}
+
 ];
 
 let currentWeek = 0;
